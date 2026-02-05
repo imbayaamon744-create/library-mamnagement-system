@@ -1,0 +1,113 @@
+#include <iostream>
+# include<string>
+using namespace std;
+
+class library{
+    
+
+    public:
+    
+    string book;
+    string name;
+    string title;
+    bool found=true;
+    
+    
+    
+    void input()
+    {
+        
+        cout<<"What's the university's libary name :" <<endl;
+        getline(cin,name);
+        cout<<endl;
+        
+     }
+       
+     
+     void addBook()
+     {
+         cout<<"Enter the book you wish to add "<<endl;
+         getline(cin,book);
+         cout<<book <<"successfully added";
+         cout<<endl;
+         
+         
+     }
+     
+     
+     
+            void search()
+       {
+           cout<<"Enter the name of the book your are searching for"<<endl;
+           getline(cin,title);
+           cout<<endl;
+         
+           
+           if(title==book){
+               found=true;
+                cout<<"We found your book."<<endl;
+           }
+          
+           else{
+               
+               cout<<"We did not find the book"<<endl;
+               
+           } 
+       }
+     
+     
+     
+     
+    void display(){
+     cout<<"The university's library name is "<<name<<endl; 
+      cout<<"The book's name is "<<title<<endl; 
+       cout<<"Book successfully added!"<<endl;
+    }
+    
+    
+    void menu() {
+        int choice;
+
+        do {
+            cout << "\n------ Library Menu ------" << endl;
+            cout << "1. Add Book" << endl;
+            cout << "2. Search Book" << endl;
+            cout << "3. Display Library Info" << endl;
+            cout << "4. Exit" << endl;
+            cout << "Enter your choice: "<<endl;
+            cin >> choice;
+            cin.ignore();
+           
+
+            switch (choice) {
+                case 1:
+                    addBook();
+                    break;
+               
+                case 2:
+                    search();
+                    break;
+                case 3:
+                    display();
+                    break;
+                case 4:
+                    cout << "Exiting library system..." << endl;
+                    break;
+                default:
+                    cout << "Invalid choice. Try again." << endl;
+            }
+
+        } while (choice != 4);
+        
+    }
+};
+
+int main(){
+    
+library branch;
+branch.input(); 
+branch.menu();
+
+   return 0;
+
+}
