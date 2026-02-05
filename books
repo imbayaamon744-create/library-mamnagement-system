@@ -1,0 +1,47 @@
+#include <iostream>
+# include<string>
+using namespace std;
+
+class book{
+    public:
+    string title;
+    string author;
+    int ISBN_number;
+    
+    
+    void input(){
+        
+        cout<<"Enter the title : "<<endl;
+        getline(cin,title);
+        cout<<endl;
+        
+
+
+        cout<<"Who is the author : "<<endl;
+        getline(cin,author);
+        cout<<endl;
+     
+
+       cout<<"Enter the ISBN number:"<<endl; 
+       cin>>ISBN_number;
+       cout<<endl;
+        
+     }
+    void display(){
+        cout<<"The book you want is titled  "<<title<<endl;
+        cout<<"The book's  author is "<<author<<endl;
+        cout<<"The number is "<<ISBN_number<<endl;
+    }
+    
+    
+};
+
+int main(){
+    
+book novel;
+novel.input();
+novel.display();
+
+
+    return 0;
+}
