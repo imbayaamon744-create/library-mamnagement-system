@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class user{
+    public:
+    string studentName;
+    int admNumber;
+    
+    
+    void input(){
+        
+        cout<<"What's your name :" <<endl;
+        getline(cin,studentName);
+        
+       cout<<"Enter your admission number:"<<endl; 
+       cin>>admNumber;
+        
+     }
+    void display(){
+        cout<<"My name is "<<studentName<<endl;
+        cout<<"My admission  number is "<<admNumber<<endl;
+    }
+    
+    
+};
+
+int main(){
+    
+user student;
+student.input();
+student.display();
+
+
+    return 0;
+}
